@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@import "flowbite/src/themes/default.css";
+
+/* import Flowbite Vue styles */
+@import "flowbite-vue/index.css";
+@import "flowbite/src/themes/themes.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* import Flowbite plugin */
+@plugin "flowbite/plugin";
+
+@source "../../node_modules/flowbite";
+
+@custom-variant dark (&:where(.dark, .dark *));
