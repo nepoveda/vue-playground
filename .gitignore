@@ -1,0 +1,15 @@
+/todo-app/.editorconfig
+/todo-app/.gitattributes
+/todo-app/.gitignore
+/todo-app/.prettierrc.json
+/todo-app/env.d.ts
+/.idea/modules.xml
+/todo-app/package-lock.json
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/todo-app/tsconfig.app.json
+/todo-app/tsconfig.json
+/todo-app/tsconfig.node.json
+/todo-app/tsconfig.vitest.json
+/.idea/vcs.xml
+/.idea/vue-playground.iml
