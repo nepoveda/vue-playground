@@ -1,19 +1,22 @@
-import {ref, computed, type Ref, type UnwrapRef} from 'vue'
-import { defineStore } from 'pinia'
-
-export const useTaskStore = defineStore('task',  {
-  state:() => {
-    return {
-      name: null,
-      detail: null,
-      isDone: false
-    }
-  }
-
-})
+import {defineStore} from 'pinia'
 
 interface taskInfo {
+  id?: string,
   name: string,
   detail: string,
   idDone: boolean
 }
+
+export const useTaskStore = defineStore('tasks', {
+  state: () => {
+    return {
+      tasks: [] as taskInfo[],
+    }
+  },
+  actions: {
+    add(task: taskInfo) {
+      task.id = crypto.randomUUID()
+      this.tasks.push(task)
+    }
+  }
+})
