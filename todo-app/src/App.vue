@@ -1,17 +1,17 @@
-<script setup lang="ts">
-import Task from "@/components/Task.vue";
-import TaskList from "@/components/TaskList.vue";
+<script lang="ts" setup>
+import {FwbNavbar} from "flowbite-vue";
 </script>
 
 <template>
+  <FwbNavbar class="bg-dark-soft">
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/create">Create</RouterLink>
+  </FwbNavbar>
+
   <div class="w-screen flex flex-col">
-    <div>
-      <Task></Task>
-    </div>
-    <div class="mt-5">
-      <TaskList></TaskList>
-    </div>
+    <RouterView/>
   </div>
+
 </template>
 
 <style>
