@@ -4,7 +4,7 @@ interface taskInfo {
   id?: string,
   name: string,
   detail: string,
-  idDone: boolean
+  isDone: boolean
 }
 
 export const useTaskStore = defineStore('tasks', {
