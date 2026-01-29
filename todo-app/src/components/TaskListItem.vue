@@ -11,7 +11,8 @@ const props = defineProps<{ task: TaskInfo }>()
     {{ props.task.name }}
   </fwb-heading>
   <p>{{ props.task.detail }}</p>
-  <fwb-checkbox v-model="props.task.isDone" class="lg:w-5 lg:h-5" label="Done"/>
+  <fwb-checkbox v-model="props.task.isDone" class="lg:w-5 lg:h-5"
+                label="props.task.isDone"/>
 </template>
 
 <style scoped>
