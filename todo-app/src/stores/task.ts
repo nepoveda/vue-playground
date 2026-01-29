@@ -1,6 +1,6 @@
 import {defineStore} from 'pinia'
 
-interface taskInfo {
+export interface TaskInfo {
   id?: string,
   name: string,
   detail: string,
@@ -10,13 +10,13 @@ interface taskInfo {
 export const useTaskStore = defineStore('tasks', {
   state: () => {
     return {
-      tasks: [] as taskInfo[],
+      tasks: [] as TaskInfo[],
     }
   },
   actions: {
-    add(task: taskInfo) {
-      task.id = crypto.randomUUID()
-      this.tasks.push(task)
-    }
-  }
+    add(task: Omit<TaskInfo, 'id'>) {
+      const newTask: TaskInfo = {...task, id: crypto.randomUUID()}
+      this.tasks.push(newTask)
+    },
+  },
 })
