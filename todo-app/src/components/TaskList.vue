@@ -14,7 +14,8 @@ const tasksStore = useTaskStore()
       <TaskListItem :task="task"/>
     </div>
     <fwb-heading class="mb-2 p-2 text-4xl font-bold" tag="h2">Completed List</fwb-heading>
-    <div v-for="task in tasksStore.completed" :key="task.id" class="m-4 p-3 border-2 border-white">
+    <div v-for="task in tasksStore.completed" :key="task.id"
+         class="m-4 p-3 border-2 border-white">
       <TaskListItem :task="task"/>
     </div>
   </div>
