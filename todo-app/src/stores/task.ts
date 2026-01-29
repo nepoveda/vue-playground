@@ -22,5 +22,9 @@ export const useTaskStore = defineStore('tasks', {
       const newTask: TaskInfo = {...task, id: crypto.randomUUID()}
       this.tasks.push(newTask)
     },
+    remove(id?: string) {
+      if (!id) return
+      this.tasks = this.tasks.filter(task => task.id !== id)
+    },
   },
 })

@@ -44,7 +44,7 @@ function bulkCreate() {
       <fwb-textarea id="taskDetail" v-model="detail" label="Description"
                     placeholder="Description..."/>
       <fwb-checkbox id="isDone" v-model="isDone" label="Is done?"/>
-      <fwb-button class="p-2" color="default" size="md">Save</fwb-button>
+      <fwb-button class="p-2" color="green" size="md">Save</fwb-button>
     </form>
 
   </div>
