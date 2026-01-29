@@ -13,6 +13,10 @@ export const useTaskStore = defineStore('tasks', {
       tasks: [] as TaskInfo[],
     }
   },
+  getters: {
+    active: (state) => state.tasks.filter(task => !task.isDone),
+    completed: (state) => state.tasks.filter(task => task.isDone),
+  },
   actions: {
     add(task: Omit<TaskInfo, 'id'>) {
       const newTask: TaskInfo = {...task, id: crypto.randomUUID()}
