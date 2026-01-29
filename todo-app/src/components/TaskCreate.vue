@@ -16,6 +16,9 @@ function saveTask() {
     detail: detail.value,
     isDone: isDone.value
   })
+  name.value = ""
+  detail.value = ""
+  isDone.value = false
 }
 
 function bulkCreate() {
